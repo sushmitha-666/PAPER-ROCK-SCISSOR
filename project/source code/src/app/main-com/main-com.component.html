@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 text-center">
+            <hr>
+            <hr>
+            <hr>
+
+
+<button [hidden]="start_but"class="btn btn-success main_btn"(click)="start_game()">start game</button>
+<div [hidden]="!start_but">
+
+    <div class="contanier">
+        <div class="row">
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-12 bg-danger mt-2 rounded hum1">HUMAN</div>
+                </div>
+
+
+               <button (click)="paper()"  class="btn btn-primary human">paper</button><br>   
+               <button  (click)="rock()" class="btn btn-primary human">rock</button><br>
+               <button (click)="scissor()"  class="btn btn-primary human">scissor</button>
+
+
+
+            </div>
+
+            <div class="col-6 main_box">
+
+                <h1> Main Container</h1>
+               <div class="row">
+                
+                </div>
+                <div class="col-12">match number:{{t_match}}
+                    <span style="color:red"></span>
+                </div>
+                <div class="row">
+                    <div class="col-6">human 
+                        <hr style="border:solid 2px;">
+                        <h4>WIN:{{h_win}}</h4>
+                        <h4>DRAW:{{h_draw}}</h4>
+                        <h4>LOSS:{{h_lost}}</h4>
+                    </div>
+                    <div class="col-6">machine
+                        <hr style="border:solid 2px;">
+                        <h4>WIN:{{m_win}}</h4>
+                        <h4>DRAW:{{m_draw}}</h4>
+                        <h4>LOSS:{{m_lost}}</h4>
+                    </div>
+
+
+
+
+                <div class="col-6 game_vid"><h3>human</h3>
+
+                   <img [src]="l_img_url" height="140px">
+                    
+                </div>
+
+                
+                <div class="col-6 game_vid"><h3>machine</h3>
+                    <img [src]=" r_img_url" height="140px"></div>
+            
+                
+               </div>
+
+            </div>
+            
+            <div class="col-3">   <div class="col-12 bg-danger mt-2 rounded hum1">MACHINE</div>
+            <button class="btn btn-primary human">paper</button><br>   
+                <button class="btn btn-primary human">rock</button><br>
+                <button class="btn btn-primary human"> scissor</button></div>
+   
+        </div>
+    </div>
+    
+</div>
+
+
+</div>
+
+        
+    
+        <div class="col-md-1"></div>
+    </div>
